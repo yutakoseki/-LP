@@ -22,11 +22,11 @@ const Flow: React.FC<FlowProps> = ({ content }) => {
           </p>
         </div>
 
-        <div className="relative">
+        <div className="relative max-w-6xl mx-auto">
           {/* Connection line for desktop */}
           <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-gray-200"></div>
 
-          <div className="grid lg:grid-cols-5 gap-8">
+          <div className="grid lg:grid-cols-4 gap-8">
             {content.steps.map((step, index) => (
               <div
                 key={index}

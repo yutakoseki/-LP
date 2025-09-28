@@ -64,7 +64,7 @@ const Feature: React.FC<FeatureProps> = ({ content }) => {
                         className="flex items-center text-gray-600"
                       >
                         <svg
-                          className="w-5 h-5 text-green-500 mr-3 flex-shrink-0"
+                          className="w-5 h-5 text-secondary-500 mr-3 flex-shrink-0"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"

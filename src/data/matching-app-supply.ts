@@ -7,7 +7,7 @@ export const supplyContent: MatchingAppContent = {
     subtitle: "サービス提供者向け",
     description:
       "あなたのサービスや商品を必要としている人々と出会い、新しいビジネスチャンスを創出しましょう。",
-    ctaText: "今すぐ登録する",
+    ctaText: "ウェイティングリストに登録する",
     heroImage:
       "https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8N3x8YnVzaW5lc3N8ZW58MHx8fHx8MTY4MDU3MzUxOQ&ixlib=rb-4.0.3&q=80&w=1080",
     heroImageAlt: "サービス提供者のイメージ",
@@ -82,37 +82,37 @@ export const supplyContent: MatchingAppContent = {
   cases: {
     title: "成功事例",
     description:
-      "私たちのプラットフォームで成功したビジネスパートナーシップをご紹介します。",
+      "私たちのプラットフォームで理想のクライアントを見つけたサービス提供者の声をご紹介します。",
     cases: [
       {
-        company: "株式会社テックソリューション",
-        title: "新規事業のパートナーを見つけました",
+        company: "田中デザイン事務所",
+        title: "継続的なクライアントとの関係を築けました",
         description:
-          "AIマッチングシステムのおかげで、私たちの新規事業に最適なパートナー企業と出会うことができました。",
+          "Webデザイナーとして独立したばかりでしたが、このプラットフォームで信頼できるクライアントと出会うことができました。継続的な案件をいただき、安定した収入を得られるようになりました。",
         image:
           "https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8N3x8YnVzaW5lc3N8ZW58MHx8fHx8MTY4MDU3MzUxOQ&ixlib=rb-4.0.3&q=80&w=1080",
-        result: "年間売上2億円達成",
-        category: "IT企業",
+        result: "月収100万円達成",
+        category: "Webデザイン",
       },
       {
-        company: "株式会社マーケティングプロ",
-        title: "海外展開のパートナーと提携",
+        company: "プログラミングスクール",
+        title: "多くの生徒さんとの出会いで事業拡大",
         description:
-          "海外展開を考えていましたが、適切なパートナー企業と出会い、成功裏に海外市場に参入できました。",
+          "プログラミング講師として活動していましたが、このプラットフォームで多くの学習者と出会い、オンラインスクールを立ち上げることができました。現在は50名以上の生徒さんに指導しています。",
         image:
-          "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8M3x8YnVzaW5lc3N8ZW58MHx8fHx8MTY4MDU3MzUxOQ&ixlib=rb-4.0.3&q=80&w=1080",
-        result: "海外売上50%増加",
-        category: "マーケティング企業",
+          "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8M3x8Y291cGxlfGVufDB8fHx8MTY4MDU3MzUxOQ&ixlib=rb-4.0.3&q=80&w=1080",
+        result: "生徒数50名突破",
+        category: "教育・指導",
       },
       {
-        company: "株式会社イノベーション",
-        title: "技術提携で新商品開発",
+        company: "経営コンサルタント事務所",
+        title: "大手企業との契約で事業が飛躍",
         description:
-          "技術力の高いパートナー企業と出会い、革新的な新商品の開発に成功しました。",
+          "中小企業向けのコンサルティングを行っていましたが、このプラットフォームで大手企業の経営者と出会い、大きなプロジェクトを任せていただけるようになりました。",
         image:
-          "https://images.unsplash.com/photo-1518709268805-4e9042af2176?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8N3x8YnVzaW5lc3N8ZW58MHx8fHx8MTY4MDU3MzUxOQ&ixlib=rb-4.0.3&q=80&w=1080",
-        result: "新商品売上1億円突破",
-        category: "製造業",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8Mnx8Y29uc3VsdGluZ3xlbnwwfHx8fHwxNjgwNTczNTE5&ixlib=rb-4.0.3&q=80&w=1080",
+        result: "年商5000万円達成",
+        category: "経営コンサル",
       },
     ],
   },
@@ -131,7 +131,7 @@ export const supplyContent: MatchingAppContent = {
         title: "サービスプロフィール作成",
         description:
           "あなたのサービス内容、業界、提供可能な内容などを詳しく入力します。",
-        icon: "users",
+        icon: "star",
       },
       {
         step: 3,

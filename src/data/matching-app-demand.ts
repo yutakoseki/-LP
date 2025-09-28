@@ -3,11 +3,11 @@ import { MatchingAppContent } from "@/types/matching-app";
 export const demandContent: MatchingAppContent = {
   targetAudience: "demand",
   hero: {
-    title: "理想の人との出会いを見つけよう",
+    title: "理想のパートナーとの出会いを見つけよう",
     subtitle: "マッチングプラットフォーム",
     description:
-      "あなたに最適な人との出会いをサポート。シンプルで効果的なマッチングシステムで、真剣な出会いを提供します。",
-    ctaText: "今すぐ登録する",
+      "あなたに最適なパートナーとの出会いをサポート。シンプルで効果的なマッチングシステムで、真剣な出会いを提供します。",
+    ctaText: "ウェイティングリストに登録する",
     heroImage:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8M3x8Y291cGxlfGVufDB8fHx8MTY4MDU3MzUxOQ&ixlib=rb-4.0.3&q=80&w=1080",
     heroImageAlt: "人と人との出会いのイメージ",
@@ -23,9 +23,10 @@ export const demandContent: MatchingAppContent = {
       "私たちのマッチングプラットフォームで、これらの問題を解決できます。",
     problems: [
       {
-        title: "理想の人との出会いがない",
-        description: "出会いの場が限られていて、理想の人と出会う機会が少ない。",
-        icon: "heart",
+        title: "理想のパートナーが見つからない",
+        description:
+          "出会いの場が限られていて、理想のパートナーと出会う機会が少ない。",
+        icon: "handshake",
       },
       {
         title: "時間をかけて探すのが大変",
@@ -43,12 +44,12 @@ export const demandContent: MatchingAppContent = {
   feature: {
     title: "私たちのマッチングプラットフォームの特徴",
     description:
-      "シンプルで効果的なマッチングシステムで、あなたに最適な人との出会いを提供します。",
+      "シンプルで効果的なマッチングシステムで、あなたに最適なパートナーとの出会いを提供します。",
     features: [
       {
         title: "シンプルなマッチングシステム",
         description:
-          "複雑な設定は不要。プロフィールを見て、気になる人にマッチングを送るだけのシンプルな仕組みです。",
+          "複雑な設定は不要。プロフィールを見て、気になるパートナーにマッチングを送るだけのシンプルな仕組みです。",
         icon: "target",
         benefits: ["直感的な操作", "迷わない設計", "すぐに始められる"],
         image:
@@ -66,9 +67,9 @@ export const demandContent: MatchingAppContent = {
         imageAlt: "セキュリティとプライバシー保護のイメージ",
       },
       {
-        title: "真剣な出会いをサポート",
+        title: "真剣なパートナーシップをサポート",
         description:
-          "真剣な出会いを求める方々が集まる、質の高いコミュニティです。",
+          "真剣なパートナーシップを求める方々が集まる、質の高いコミュニティです。",
         icon: "star",
         benefits: ["真剣度チェック", "質の高い会員", "安心して出会える"],
         image:
@@ -80,43 +81,44 @@ export const demandContent: MatchingAppContent = {
   cases: {
     title: "成功事例",
     description:
-      "私たちのマッチングプラットフォームで素晴らしい出会いを見つけた方々の声をご紹介します。",
+      "私たちのマッチングプラットフォームで理想のサービス提供者を見つけた依頼者の声をご紹介します。",
     cases: [
       {
         company: "田中さん（30代・会社員）",
-        title: "3ヶ月で理想の人と出会えました",
+        title: "3ヶ月で理想のデザイナーと出会えました",
         description:
-          "忙しい仕事の中で出会いを探していましたが、シンプルなマッチングシステムのおかげで、価値観の合う理想の人と出会うことができました。",
+          "Webサイトのリニューアルを依頼したかったのですが、信頼できるデザイナーを探すのに苦労していました。このプラットフォームで、私たちの要望を理解してくれる素晴らしいデザイナーと出会うことができました。",
         image:
-          "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8M3x8Y291cGxlfGVufDB8fHx8MTY4MDU3MzUxOQ&ixlib=rb-4.0.3&q=80&w=1080",
-        result: "素晴らしい出会い",
-        category: "30代",
+          "https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8N3x8YnVzaW5lc3N8ZW58MHx8fHx8MTY4MDU3MzUxOQ&ixlib=rb-4.0.3&q=80&w=1080",
+        result: "満足のいくWebサイト完成",
+        category: "Web制作",
       },
       {
         company: "佐藤さん（20代・学生）",
-        title: "同じ趣味を持つ相手と出会えました",
+        title: "プログラミング学習のメンターを見つけました",
         description:
-          "趣味が合う相手を探していましたが、プロフィールを見て同じ趣味を持つ素敵な人と出会えました。",
+          "プログラミングを独学で学んでいましたが、行き詰まってしまいました。このプラットフォームで経験豊富なメンターを見つけ、効率的にスキルアップすることができました。",
         image:
-          "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8NXx8Y291cGxlfGVufDB8fHx8MTY4MDU3MzUxOQ&ixlib=rb-4.0.3&q=80&w=1080",
-        result: "継続的な関係",
-        category: "20代",
+          "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8M3x8Y291cGxlfGVufDB8fHx8MTY4MDU3MzUxOQ&ixlib=rb-4.0.3&q=80&w=1080",
+        result: "プログラミングスキル習得",
+        category: "教育・学習",
       },
       {
         company: "山田さん（40代・自営業）",
-        title: "真剣な出会いを求めて正解でした",
+        title: "経営コンサルタントとの出会いで事業が拡大",
         description:
-          "真剣な出会いを求めていましたが、このプラットフォームで同じ気持ちの相手と出会い、現在も良い関係を続けています。",
+          "事業の成長に悩んでいましたが、このプラットフォームで優秀な経営コンサルタントと出会い、戦略的なアドバイスを受けることができました。その結果、売上を大幅に伸ばすことができました。",
         image:
-          "https://images.unsplash.com/photo-1518709268805-4e9042af2176?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8N3x8Y291cGxlfGVufDB8fHx8MTY4MDU3MzUxOQ&ixlib=rb-4.0.3&q=80&w=1080",
-        result: "継続的な関係",
-        category: "40代",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw2MzQ2fDB8MXxzZWFyY2h8Mnx8Y29uc3VsdGluZ3xlbnwwfHx8fHwxNjgwNTczNTE5&ixlib=rb-4.0.3&q=80&w=1080",
+        result: "売上200%増加",
+        category: "経営コンサル",
       },
     ],
   },
   flow: {
     title: "利用の流れ",
-    description: "簡単4ステップで理想の人との出会いをスタートできます。",
+    description:
+      "簡単4ステップで理想のパートナーとの出会いをスタートできます。",
     steps: [
       {
         step: 1,
@@ -128,20 +130,22 @@ export const demandContent: MatchingAppContent = {
       {
         step: 2,
         title: "プロフィール作成",
-        description: "あなたの趣味、価値観、理想の人像などを詳しく入力します。",
-        icon: "users",
+        description:
+          "あなたの趣味、価値観、理想のパートナー像などを詳しく入力します。",
+        icon: "star",
       },
       {
         step: 3,
         title: "マッチング",
-        description: "気になる人のプロフィールを見て、マッチングを送ります。",
+        description:
+          "気になるパートナーのプロフィールを見て、マッチングを送ります。",
         icon: "heart",
       },
       {
         step: 4,
         title: "メッセージ交換",
         description:
-          "マッチングした相手とメッセージを交換し、お互いを知り合います。",
+          "マッチングしたパートナーとメッセージを交換し、お互いを知り合います。",
         icon: "message",
       },
     ],
@@ -169,7 +173,7 @@ export const demandContent: MatchingAppContent = {
       {
         question: "マッチングはどのように行われますか？",
         answer:
-          "シンプルな仕組みです。気になる人のプロフィールを見て、マッチングを送るだけです。相手が承認すればマッチング成立です。",
+          "シンプルな仕組みです。気になるパートナーのプロフィールを見て、マッチングを送るだけです。相手が承認すればマッチング成立です。",
       },
       {
         question: "退会はいつでもできますか？",

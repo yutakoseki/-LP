@@ -93,8 +93,8 @@ export const colorThemes: Record<string, ColorTheme> = {
       900: "#0f172a",
     },
   },
-  green: {
-    name: "Green",
+  secondary: {
+    name: "secondary",
     primary: {
       50: "#f0fdf4",
       100: "#dcfce7",

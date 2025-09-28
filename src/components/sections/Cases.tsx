@@ -1,6 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
-import { CaseContent } from '@/types/matching-app';
+import React from "react";
+import Image from "next/image";
+import { CaseContent } from "@/types/matching-app";
 
 interface CasesProps {
   content: CaseContent;
@@ -15,15 +15,13 @@ const Cases: React.FC<CasesProps> = ({ content }) => {
             {content.title}
           </h2>
           {content.subtitle && (
-            <p className="text-xl text-gray-600 mb-8">
-              {content.subtitle}
-            </p>
+            <p className="text-xl text-gray-600 mb-8">{content.subtitle}</p>
           )}
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             {content.description}
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {content.cases.map((caseStudy, index) => (
             <div
@@ -41,26 +39,26 @@ const Cases: React.FC<CasesProps> = ({ content }) => {
                   />
                 </div>
               )}
-              
+
               <div className="p-6">
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 bg-primary-100 text-primary-700 text-sm font-medium rounded-full">
                     {caseStudy.company}
                   </span>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {caseStudy.title}
                 </h3>
-                
+
                 <p className="text-gray-600 leading-relaxed mb-4">
                   {caseStudy.description}
                 </p>
-                
+
                 {caseStudy.result && (
                   <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-sm font-medium text-green-700">
+                    <div className="w-2 h-2 bg-secondary-500 rounded-full"></div>
+                    <span className="text-sm font-medium text-secondary-700">
                       {caseStudy.result}
                     </span>
                   </div>

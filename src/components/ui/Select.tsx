@@ -1,27 +1,27 @@
 import React from "react";
 
-interface InputProps {
+interface SelectProps {
   label: string;
   name: string;
-  type?: "text" | "email" | "tel" | "password";
   placeholder?: string;
   required?: boolean;
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   error?: string;
   className?: string;
+  options: { value: string; label: string }[];
 }
 
-const Input: React.FC<InputProps> = ({
+const Select: React.FC<SelectProps> = ({
   label,
   name,
-  type = "text",
   placeholder,
   required = false,
   value,
   onChange,
   error,
   className = "",
+  options,
 }) => {
   return (
     <div className={`w-full ${className}`}>
@@ -32,21 +32,30 @@ const Input: React.FC<InputProps> = ({
         {label}
         {required && <span className="text-red-500 ml-1">*</span>}
       </label>
-      <input
-        type={type}
+      <select
         id={name}
         name={name}
-        placeholder={placeholder}
         required={required}
         value={value}
         onChange={onChange}
         className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 bg-white text-gray-900 ${
           error ? "border-red-500 focus:ring-red-500 focus:border-red-500" : ""
         }`}
-      />
+      >
+        {placeholder && (
+          <option value="" disabled>
+            {placeholder}
+          </option>
+        )}
+        {options.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
       {error && <p className="mt-1 text-sm text-red-600">{error}</p>}
     </div>
   );
 };
 
-export default Input;
+export default Select;

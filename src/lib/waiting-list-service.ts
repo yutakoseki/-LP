@@ -1,14 +1,17 @@
-import { NotionClient } from './notion';
-import { GoogleSheetsClient } from './google-sheets';
-import { EmailClient } from './email';
-import { getConfigFromEnv } from '@/config/lp-config';
+import { NotionClient } from "./notion";
+import { GoogleSheetsClient } from "./google-sheets";
+import { EmailClient } from "./email";
+import { getConfigFromEnv } from "@/config/lp-config";
 
 interface WaitingListData {
-  name: string;
+  lastName: string;
+  firstName: string;
+  gender: string;
+  birthDate: string;
   company?: string;
   email: string;
   phone?: string;
-  targetAudience: 'demand' | 'supply';
+  targetAudience: "demand" | "supply";
 }
 
 export class WaitingListService {
@@ -19,13 +22,13 @@ export class WaitingListService {
 
     try {
       switch (integrationType) {
-        case 'notion':
+        case "notion":
           await this.addToNotion(data);
           break;
-        case 'spreadsheet':
+        case "spreadsheet":
           await this.addToGoogleSheets(data);
           break;
-        case 'email':
+        case "email":
         default:
           await this.addToEmail(data);
           break;
@@ -34,16 +37,16 @@ export class WaitingListService {
       // ローカルストレージにも保存（バックアップ用）
       this.saveToLocalStorage(data);
     } catch (error) {
-      console.error('Waiting list service error:', error);
-      throw new Error('Failed to add to waiting list');
+      console.error("Waiting list service error:", error);
+      throw new Error("Failed to add to waiting list");
     }
   }
 
   private async addToNotion(data: WaitingListData): Promise<void> {
     const { notionToken, notionDatabaseId } = this.config.waitingListConfig;
-    
+
     if (!notionToken || !notionDatabaseId) {
-      throw new Error('Notion configuration is missing');
+      throw new Error("Notion configuration is missing");
     }
 
     const notionClient = new NotionClient(notionToken, notionDatabaseId);
@@ -51,14 +54,11 @@ export class WaitingListService {
   }
 
   private async addToGoogleSheets(data: WaitingListData): Promise<void> {
-    const { 
-      spreadsheetId, 
-      googleServiceAccountEmail, 
-      googlePrivateKey 
-    } = this.config.waitingListConfig;
-    
+    const { spreadsheetId, googleServiceAccountEmail, googlePrivateKey } =
+      this.config.waitingListConfig;
+
     if (!spreadsheetId || !googleServiceAccountEmail || !googlePrivateKey) {
-      throw new Error('Google Sheets configuration is missing');
+      throw new Error("Google Sheets configuration is missing");
     }
 
     const sheetsClient = new GoogleSheetsClient(
@@ -71,9 +71,9 @@ export class WaitingListService {
 
   private async addToEmail(data: WaitingListData): Promise<void> {
     const { emailTo } = this.config.waitingListConfig;
-    
+
     if (!emailTo) {
-      throw new Error('Email configuration is missing');
+      throw new Error("Email configuration is missing");
     }
 
     const emailClient = new EmailClient(emailTo);
@@ -81,30 +81,35 @@ export class WaitingListService {
   }
 
   private saveToLocalStorage(data: WaitingListData): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     try {
-      const existingData = JSON.parse(localStorage.getItem('waitingList') || '[]');
+      const existingData = JSON.parse(
+        localStorage.getItem("waitingList") || "[]"
+      );
       const newEntry = {
         ...data,
         id: Date.now().toString(),
         timestamp: new Date().toISOString(),
       };
-      
-      localStorage.setItem('waitingList', JSON.stringify([...existingData, newEntry]));
+
+      localStorage.setItem(
+        "waitingList",
+        JSON.stringify([...existingData, newEntry])
+      );
     } catch (error) {
-      console.error('Failed to save to localStorage:', error);
+      console.error("Failed to save to localStorage:", error);
     }
   }
 
   async getWaitingListData(): Promise<WaitingListData[]> {
-    if (typeof window === 'undefined') return [];
+    if (typeof window === "undefined") return [];
 
     try {
-      const data = localStorage.getItem('waitingList');
+      const data = localStorage.getItem("waitingList");
       return data ? JSON.parse(data) : [];
     } catch (error) {
-      console.error('Failed to get waiting list data:', error);
+      console.error("Failed to get waiting list data:", error);
       return [];
     }
   }
