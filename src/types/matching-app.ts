@@ -1,4 +1,4 @@
-export type TargetAudience = 'demand' | 'supply';
+export type TargetAudience = "demand" | "supply";
 
 export interface MatchingAppContent {
   targetAudience: TargetAudience;
@@ -42,6 +42,7 @@ export interface FeatureItem {
   description: string;
   icon?: string;
   image?: string;
+  imageAlt?: string;
   benefits?: string[];
 }
 

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef } from "react";
 
 interface DatePickerProps {
   label: string;
@@ -23,7 +23,6 @@ const DatePicker: React.FC<DatePickerProps> = ({
   min,
   max,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   // 日付のフォーマット（YYYY-MM-DD → YYYY年MM月DD日）
@@ -52,7 +51,6 @@ const DatePicker: React.FC<DatePickerProps> = ({
 
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     onChange(e);
-    setIsOpen(false);
   };
 
   return (
